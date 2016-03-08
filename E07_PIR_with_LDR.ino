@@ -72,11 +72,11 @@ void loop()
         FAST_90ms() {
         
             //Auto Mode when LDR <= LDR_THRESOLD
-            if(mOutput(PIR) != Souliss_T1n_AutoCmd && mOutputasFloat(LDR) <= LDR_THRESOLD)
+            if(mOutput(PIR) != Souliss_T1n_AutoCmd && mOutputAsFloat(LDR) <= LDR_THRESOLD)
                 mInput(PIR) = Souliss_T1n_AutoCmd;
             
             //Off Mode when LDR >= LDR_THRESOLD
-            if(mOutput(PIR) == Souliss_T1n_AutoCmd && mOutputasFloat(LDR) >= LDR_THRESOLD)
+            if(mOutput(PIR) == Souliss_T1n_AutoCmd && mOutputAsFloat(LDR) >= LDR_THRESOLD)
                 mInput(PIR) == Souliss_T1n_OffCmd;
                 
             // Use BUTTON_PIN to Toggle On/Off
